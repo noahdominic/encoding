@@ -28,7 +28,6 @@ def nrzi(inputbytes):
     outputbytes = []
     tempbyte = 0
     for i in inputbytes:
-        # nextbyte = 10 * (i == 1) * (not inputbytes)- 5
         nextbyte = (tempbyte) != (i > 0)
         outputbytes.append(10 * nextbyte - 5)
         tempbyte = nextbyte
